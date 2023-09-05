@@ -1,0 +1,23 @@
+ALGORITHM palindrome
+    str, word = : ARRAY_OF STRING[0....10];
+VAR
+    i,j:= INTEGER
+BEGIN
+    REPEAT
+        write ("donner une chaine ");
+        read ("word ");
+    UNTIL (word.length)>2;
+    str = "";
+    FOR i FROM 0 TO word.length-1 DO
+        str = word[i]+str
+        FOR j FROM 0 TO word.length/2 DO
+            str = word[j]+str
+            IF (word == str) THEN
+        write ("palindrome");
+        else
+        write ("non palindrome");
+    END_IF
+        END_FOR
+    END_FOR
+    
+END
